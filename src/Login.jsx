@@ -31,6 +31,7 @@ const register=(e)=>{
 
     createUserWithEmailAndPassword(auth,email,password)
     .then((auth)=>{
+        //successfully created  a new user with email & pswd
         console.log(auth)
     navigate('/')})
     .catch(error=>alert(error.message))

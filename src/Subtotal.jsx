@@ -9,7 +9,7 @@ function Subtotal() {
     const [{ basket }, dispatch] = useStateValue();
   
     return (
-        <div className='subtotal'>
+        <div className='subtotal'  >
             <NumericFormat
             
                 renderText={(value) => (

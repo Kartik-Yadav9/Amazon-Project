@@ -5,10 +5,13 @@ export const innerInitialState= {
 
 //selector
 
-export const getBasketTotal=(basket)=>{
-    return basket?.reduce((amount, item)=>  amount + item.product_price , 0)
-}
+// export const getBasketTotal=(basket)=>{
+//     return basket?.reduce((amount, item)=>  amount + item.product_price , 0)
+// }
 
+export const getBasketTotal=(basket)=>{
+   return  basket.reduce((amount, item)=> amount + item.product_price, 0)
+}
 
 const reducer= (state, action)=>{
 
@@ -21,9 +24,9 @@ const reducer= (state, action)=>{
 
         case "REMOVE_FROM_BASKET":                                                      
             const index= state.basket.findIndex(                            //function inside findindex
-                function(basketItem)
-                {return basketItem.id=== action.id                                                          
-    });
+                (basketItem)=> basketItem.id=== action.id
+                                                                         
+            );
 
             let newBasket= [...state.basket];
 
@@ -37,7 +40,7 @@ const reducer= (state, action)=>{
 
             return{
                 ...state,
-                basket: newBasket
+                basket: newBasket 
             }
 
         case "SET_USER":
