@@ -10,7 +10,6 @@
 
 .header-logo{
     width: 100px;
-    object-fit: contain;
     margin: 0 20px;
     margin-top: 18px;
 }
@@ -41,7 +40,7 @@
 
 .header_optionLineTwo{
     font-size: 13px;
-    font-weight: 800;
+    font-weight:800;
 }
 
 .header_optionBasket{

@@ -45,8 +45,6 @@ export { firebaseApp, auth };
 
 
 
-
-
 // import { initializeApp } from 'firebase/app';
 // // import Firebase from 'firebase/app';
 // // import { getAuth } from 'firebase/auth';

@@ -5,27 +5,29 @@ export const innerInitialState= {
 
 //selector
 
-// export const getBasketTotal=(basket)=>{
-//     return basket?.reduce((amount, item)=>  amount + item.product_price , 0)
-// }
-
 export const getBasketTotal=(basket)=>{
-   return  basket.reduce((amount, item)=> amount + item.product_price, 0)
+    return basket.reduce((accumulator, currentValue)=>(accumulator + currentValue.product_price), 0)
 }
+
+
+
+// export const getBasketTotal=(basket)=>{
+//    return  basket.reduce((amount, item)=> amount + item.product_price, 0)
+// }
 
 const reducer= (state, action)=>{
 
     switch(action.type){
         case "ADD_TO_BASKET":
-            return{
+            return{ 
                 ...state,
-                basket: [...state.basket, action.item]
+                basket: [...state.basket, action.payload]
             };
 
         case "REMOVE_FROM_BASKET":                                                      
             const index= state.basket.findIndex(                            //function inside findindex
-                (basketItem)=> basketItem.id=== action.id
-                                                                         
+                (basketItem)=> basketItem.id=== action.payload
+               //it will have only one item                                              
             );
 
             let newBasket= [...state.basket];

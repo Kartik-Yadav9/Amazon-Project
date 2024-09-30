@@ -8,7 +8,7 @@ function Home() {
         <div className='home_container'>
             <img  className='home_image' src='https://images-eu.ssl-images-amazon.com/images/G/31/img22/march/brands/GW/Under_1499_Tallhero_3000x1200._CB561212093_.jpg' />
             
-            <div className="home_row">
+            <div className="home_row responsive-home">
 
                 <Product
                     id="1"
@@ -28,7 +28,7 @@ function Home() {
             </div>
             
 
-            <div className="home_row">
+            <div className="home_row responsive-home">
                
 
                 <Product 

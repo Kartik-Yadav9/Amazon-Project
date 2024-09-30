@@ -2,8 +2,8 @@
 display: flex;
 justify-content: center;
 margin: auto;
-/* max-width: 1500px; */
 
+ 
 }
 
 .home_image{
@@ -17,6 +17,22 @@ margin: auto;
     display: flex;
     margin: 0px 5px 0px 5px;
     z-index: 1;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .responsive-home{
+        flex-wrap: wrap;
+    }
+
+    .home_row{
+        margin: 0px;
+    }
+
+    .home_image{
+        display: none;
+    }
 }
 
  

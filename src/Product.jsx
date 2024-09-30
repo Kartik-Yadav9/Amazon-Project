@@ -14,7 +14,7 @@ function Product({id,product_info, product_price,  rating, img }) {
         //dispatch item into datalayer\
         dispatch({
             type: "ADD_TO_BASKET",
-            item: {
+            payload : {
                 id:id,
                 product_info: product_info,
                 img: img,

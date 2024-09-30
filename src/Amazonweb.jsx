@@ -20,13 +20,12 @@ useEffect(()=>{
     if(currentUser){
 
       //the user just logged in/ user was logged in
+ 
 
-
-                                                                                //The reducer function receives the current state and the dispatched action.
-                                                                                // When the action type is 'SET_USER', the reducer updates the user property in the state with action.user.
-                                                                                // State Update:
-
-                                                                                // The user property in the state is updated to either the currentUser object (if a user is signed in) or null (if no user is signed in).
+      //The reducer function receives the current state and the dispatched action.
+      // When the action type is 'SET_USER', the reducer updates the user property in the state with action.user.
+      // State Update:   
+      // The user property in the state is updated to either the currentUser object (if a user is signed in) or null (if no user is signed in).
 
       dispatch({
         type: 'SET_USER',
